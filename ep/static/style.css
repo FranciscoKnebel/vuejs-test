@@ -21,3 +21,13 @@ li {
 	opacity: 0;
 	transform: translateX(30px);
 }
+
+.fade2-enter-active,
+.fade2-leave-active {
+	transition: opacity .4s;
+}
+
+.fade2-enter,
+.fade2-leave-to {
+	opacity: 0;
+}

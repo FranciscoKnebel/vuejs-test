@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="../static/bulma.css">
+
+    <style media="screen">
+      .color-blue {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" style="margin: 1em;">
+      <div class="box">
+        <h1 class="">Hello World</h1>
+
+        <button class="button" :class="{ 'is-loading': isLoading }" :disabled="isDisabled" @click="toggleClass">Click me</button>
+
+        <button class="button" @click="toggleButton">Toggle button</button>
+      </div>
+    </div>
+
+    <script src="../static/vue.js"></script>
+    <script type="text/javascript">
+      let app = new Vue({
+        el: '#root',
+        data: {
+          isLoading: false,
+          isDisabled: false,
+        },
+        methods: {
+          toggleClass() {
+            this.isLoading = !this.isLoading;
+
+            setTimeout(() => {
+              alert("Show");
+              this.isLoading = !this.isLoading;
+            }, 1000);
+          },
+
+          toggleButton() {
+            this.isDisabled = !this.isDisabled;
+          }
+        }
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+body {
+	background-color: #eee;
+	min-height: 100vh;
+}
+
+.is-completed {
+	background-color: lightgreen;
+}
+
+li {
+	padding: .2em;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+	transition: all 1s;
+}
+
+.fade-enter,
+.fade-leave-to {
+	opacity: 0;
+	transform: translateX(30px);
+}

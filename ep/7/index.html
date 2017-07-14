@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="../static/bulma.css">
+    <link rel="stylesheet" href="../static/style.css">
+  </head>
+  <body>
+    <div id="root" style="margin: 1em;">
+      <div class="box">
+        <h1 class="title is-1">All Tasks</h1>
+
+        <task-list :tasks="tasks">tasks</task-list>
+      </div>
+
+      <div class="box">
+        <h2 class="title is-3">Incomplete Tasks</h1>
+
+        <task-list :tasks="incompleteTasks">tasks</task-list>
+      </div>
+
+      <div class="box">
+        <h3 class="title is-3">Add tasks</h3>
+
+        <div class="field is-grouped">
+          <div class="control is-expanded">
+            <input class="input" type="text" v-model="newTask">
+          </div>
+          <div class="control">
+            <button class="button" name="button" @click="add">Create Task</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../static/vue.js"></script>
+
+    <!-- Components -->
+    <script type="text/javascript" src="components/task.js"></script>
+    <script type="text/javascript" src="components/task-list.js"></script>
+
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>

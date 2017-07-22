@@ -1,6 +1,6 @@
 Vue.component("tabs", {
 	template: `
-    <div>
+    <div class="box">
       <div class="tabs">
         <ul>
           <li v-for="tab in tabs" :class="{ 'is-active': tab.isActive }">
